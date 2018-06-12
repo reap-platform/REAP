@@ -1,5 +1,5 @@
 -- 参数
-INSERT INTO CONFIG VALUES('r.p.d.s.l.path','reap','prd','default','logging.path','../logs');
+INSERT INTO CONFIG VALUES('r.p.d.s.l.path','reap','prd','default','logging.path','${REAP_HOME:./}/logs');
 INSERT INTO CONFIG VALUES('r.p.d.s.c.enable','reap','prd','default','server.compression.enable','true');
 INSERT INTO CONFIG VALUES('r.p.d.s.c.mime-types','reap','prd','default','server.compression.mime-types','aplication/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css');
 INSERT INTO CONFIG VALUES('r.p.d.s.r.static-locations', 'reap', 'prd', 'default','spring.resources.static-locations','file:apps/${spring.application.name}/static,classpath:static');
