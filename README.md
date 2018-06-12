@@ -41,6 +41,13 @@ bin/start.bat reap-portal
 
 访问 `http://localhost:8761/reap/` 默认用户名密码： `amdin/888888`
 
+访问 `http://localhost:8082/login.jsp` 使用以下连接信息访问数据库
+
+- Driver Class `org.h2.Driver`
+- JDBC URL `jdbc:h2:tcp://localhost/../data/REAPDB`
+- User Name `reap`
+- Password `reap`
+
 ## 平台模块
 
 
