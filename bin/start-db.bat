@@ -1,0 +1,1 @@
+"%JAVA_HOME%\jre\bin\java" -cp ../libs/*  org.h2.tools.Server
