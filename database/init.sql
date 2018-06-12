@@ -1,5 +1,5 @@
 -- 参数
-INSERT INTO CONFIG VALUES('r.p.d.s.l.path','reap','prd','default','logging.path','${REAP_HOME:.}/logs');
+INSERT INTO CONFIG VALUES('r.p.d.s.l.path','reap','prd','default','logging.file','${REAP_HOME:.}/logs/${spring.application.name}/app.log');
 INSERT INTO CONFIG VALUES('r.p.d.s.c.enable','reap','prd','default','server.compression.enable','true');
 INSERT INTO CONFIG VALUES('r.p.d.s.c.mime-types','reap','prd','default','server.compression.mime-types','aplication/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css');
 INSERT INTO CONFIG VALUES('r.p.d.s.r.static-locations', 'reap', 'prd', 'default','spring.resources.static-locations','file:apps/${spring.application.name}/static,classpath:static');
@@ -15,6 +15,7 @@ INSERT INTO CONFIG VALUES('r.p.d.s.m.basename', 'reap', 'prd', 'default', 'sprin
 INSERT INTO CONFIG VALUES('r.p.d.e.c.i-i-i-r-i-s','reap','prd','default','eureka.client.initial-instance-info-replication-interval-seconds','5');
 INSERT INTO CONFIG VALUES('r.p.d.e.c.i-i-r-i-s','reap','prd','default','eureka.client.instance-info-replication-interval-seconds','5');
 INSERT INTO CONFIG VALUES('r.p.d.e.c.r-f-r-i-s','reap','prd','default','eureka.client.registry-fetch-interval-seconds','5');
+INSERT INTO CONFIG VALUES('r.p.d.m.e.w.e.include','reap','prd','default','management.endpoints.web.exposure.include','*');
 
 INSERT INTO CONFIG VALUES('r-f.p.d.s.p','reap-facility','prd','default','server.port','8761');
 INSERT INTO CONFIG VALUES ('r-r.p.d.s.port','reap-rbac','prd','default','server.port','8070');
