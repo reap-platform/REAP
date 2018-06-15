@@ -1,5 +1,9 @@
 -- 参数
 INSERT INTO CONFIG VALUES('r.p.d.s.l.path','reap','prd','default','logging.file','${REAP_HOME:.}/logs/${spring.application.name}/app.log');
+INSERT INTO CONFIG VALUES('r.p.d.l.l.o.s.web','reap','prd','default','logging.level.org.springframework.web','INFO');
+INSERT INTO CONFIG VALUES('r.p.d.s.z.baseUrl','reap','prd','default','spring.zipkin.baseUrl','http://reap-tracing');
+INSERT INTO CONFIG VALUES ('r.p.d.s.s.w.additionalSkipPattern', 'reap', 'prd', 'default', 'spring.sleuth.web.skipPattern', '/|/api-docs.*|/autoconfig|/configprops|/dump|/health|/info|/metrics.*|/mappings|/trace|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.woff|.*\.html|/favicon.ico|/hystrix.stream|/application/.*');
+INSERT INTO CONFIG VALUES('r.p.d.s.s.s.probability','reap','prd','default','spring.sleuth.sampler.probability','1.0');
 INSERT INTO CONFIG VALUES('r.p.d.s.c.enable','reap','prd','default','server.compression.enable','true');
 INSERT INTO CONFIG VALUES('r.p.d.s.c.mime-types','reap','prd','default','server.compression.mime-types','aplication/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css');
 INSERT INTO CONFIG VALUES('r.p.d.s.r.static-locations', 'reap', 'prd', 'default','spring.resources.static-locations','file:apps/${spring.application.name}/static,classpath:static');
@@ -18,10 +22,16 @@ INSERT INTO CONFIG VALUES('r.p.d.e.c.r-f-r-i-s','reap','prd','default','eureka.c
 INSERT INTO CONFIG VALUES('r.p.d.m.e.w.e.include','reap','prd','default','management.endpoints.web.exposure.include','*');
 
 INSERT INTO CONFIG VALUES('r-f.p.d.s.p','reap-facility','prd','default','server.port','8761');
+INSERT INTO CONFIG VALUES('r-f.p.d.s.s.h.enabled','reap-facility','prd','default','spring.sleuth.http.enabled','false');
+INSERT INTO CONFIG VALUES('r-f.p.d.s.s.w.enabled','reap-facility','prd','default','spring.sleuth.web.enabled','false');
+INSERT INTO CONFIG VALUES ('r-t.p.d.s.port', 'reap-tracing', 'prd', 'default', 'server.port', '9411');
+INSERT INTO CONFIG VALUES ('r-t.p.d.s.z.discoveryClientEnabled', 'reap-tracing', 'prd', 'default', 'spring.zipkin.discoveryClientEnabled', 'true');
 INSERT INTO CONFIG VALUES ('r-r.p.d.s.port','reap-rbac','prd','default','server.port','8070');
 INSERT INTO CONFIG VALUES ('r-r.p.d.p.m.salt','reap-rbac','prd','default','password.md5.salt', 'reap');
 INSERT INTO CONFIG VALUES ('r-p.p.d.s.port', 'reap-portal', 'prd', 'default', 'server.port', '8081');
 INSERT INTO CONFIG VALUES ('r-p.p.d.t.key', 'reap-portal', 'prd', 'default', 'token.key', '123456');
+INSERT INTO CONFIG VALUES ('r-p.p.d.s.s.w.additionalSkipPattern', 'reap-portal', 'prd', 'default', 'spring.sleuth.web.additionalSkipPattern', '/token');
+
 
 
 -- 路由
@@ -57,7 +67,7 @@ INSERT INTO ROLE_FUNCTIONS (ROLE_ID, FUNCTIONS_ID) VALUES ('0001', 'REAPRB0003')
 INSERT INTO ROLE_FUNCTIONS (ROLE_ID, FUNCTIONS_ID) VALUES ('0001', 'REAPRB0004');
 INSERT INTO MENU (ID, NAME, PARENT_ID, LEVEL,SEQUENCE, LEAF, FUNCTION_CODE,REMARK,CREATE_TIME) VALUES ('01'   , '系统管理', NULL, 1, 1,'N',NULL, NULL ,NULL);
 INSERT INTO MENU (ID, NAME, PARENT_ID, LEVEL,SEQUENCE, LEAF, FUNCTION_CODE,REMARK,CREATE_TIME) VALUES ('02'   , '平台管理', NULL, 1, 2,'N',NULL, NULL ,NULL);
-INSERT INTO MENU (ID, NAME, PARENT_ID, LEVEL,SEQUENCE, LEAF, FUNCTION_CODE,REMARK,CREATE_TIME) VALUES ('0101' , '机构管理', '01', 2, 1,'Y','REAPPO0001', NULL ,NULL);
+INSERT INTO MENU (ID, NAME, PARENT_ID, LEVEL,SEQUENCE, LEAF, FUNCTION_CODE,REMARK,CREATE_TIME) VALUES ('0101' , '机构管理', '01', 2, 1,'Y','REAPRB0001', NULL ,NULL);
 INSERT INTO MENU (ID, NAME, PARENT_ID, LEVEL,SEQUENCE, LEAF, FUNCTION_CODE,REMARK,CREATE_TIME) VALUES ('0102' , '用户管理', '01', 2, 2,'Y','REAPRB0002', NULL ,NULL);
 INSERT INTO MENU (ID, NAME, PARENT_ID, LEVEL,SEQUENCE, LEAF, FUNCTION_CODE,REMARK,CREATE_TIME) VALUES ('0103' , '功能管理', '01', 2, 3,'Y','REAPRB0004', NULL ,NULL);
 INSERT INTO MENU (ID, NAME, PARENT_ID, LEVEL,SEQUENCE, LEAF, FUNCTION_CODE,REMARK,CREATE_TIME) VALUES ('0104' , '岗位管理', '01', 2, 4,'Y','REAPRB0003', NULL ,NULL);

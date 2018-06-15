@@ -33,6 +33,8 @@ bin/start-db.bat
 bin/init-db.bat
 ## start reap-facility
 bin/start.bat reap-facility
+## start reap-tracing
+bin/start.bat reap-tracing
 ## start reap-rbac
 bin/start.bat reap-rbac
 ## start reap-portal 
@@ -40,6 +42,8 @@ bin/start.bat reap-portal
 ```
 
 访问 `http://localhost:8761/reap/` 默认用户名密码： `amdin/888888`
+
+访问 `http://localhost:9411/zipkin/` 来访问 zipkin 进行链路分析（TODO 后续会整合至 reap-portal ）
 
 访问 `http://localhost:8082/login.jsp` 使用以下连接信息访问数据库
 
@@ -56,3 +60,4 @@ bin/start.bat reap-portal
 | [reap-facility](https://github.com/reap-platform/reap-facility)  | 平台基础设施包含路由、参数、服务注册，提供功能整合在 ouip-portal 中进行可视化的维护管理  |
 | [reap-portal](https://github.com/reap-platform/reap-portal)  | 平台统一UI门户，所有其他应用的UI整合在 Portal 中  |
 | [reap-rbac](https://github.com/reap-platform/reap-rbac)  | 内置提供了 Role Based Access Control 对用户、机构、岗位、功能进行维护，部署中可替换  | 
+| [reap-tracing](https://github.com/reap-platform/reap-tracing)  | 平台日志分析、链路分析  |
