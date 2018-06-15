@@ -4,8 +4,6 @@
   </a>
 </p>
 
-# REAP
-
 > **The right stack for building modern distributed enterprise web applications.** :sparkles:
 
 *REAP* (Reactive Enterprise Application Platform ) 是一个开箱即用的企业级分布式应用开发平台。
