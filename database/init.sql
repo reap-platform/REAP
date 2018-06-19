@@ -22,15 +22,16 @@ INSERT INTO CONFIG VALUES('r.p.d.e.c.r-f-r-i-s','reap','prd','default','eureka.c
 INSERT INTO CONFIG VALUES('r.p.d.m.e.w.e.include','reap','prd','default','management.endpoints.web.exposure.include','*');
 
 INSERT INTO CONFIG VALUES('r-f.p.d.s.p','reap-facility','prd','default','server.port','8761');
-INSERT INTO CONFIG VALUES('r-f.p.d.s.s.h.enabled','reap-facility','prd','default','spring.sleuth.http.enabled','false');
-INSERT INTO CONFIG VALUES('r-f.p.d.s.s.w.enabled','reap-facility','prd','default','spring.sleuth.web.enabled','false');
+INSERT INTO CONFIG VALUES('r-f.p.d.s.s.z.enabled','reap-facility','prd','default','spring.sleuth.zuul.enabled','false');
+INSERT INTO CONFIG VALUES ('r-f.p.d.s.s.w.additionalSkipPattern', 'reap-facility', 'prd', 'default', 'spring.sleuth.web.additionalSkipPattern', '/eureka.*');
 INSERT INTO CONFIG VALUES ('r-t.p.d.s.port', 'reap-tracing', 'prd', 'default', 'server.port', '9411');
-INSERT INTO CONFIG VALUES ('r-t.p.d.s.z.discoveryClientEnabled', 'reap-tracing', 'prd', 'default', 'spring.zipkin.discoveryClientEnabled', 'true');
+INSERT INTO CONFIG VALUES('r-t.p.d.s.s.h.enabled','reap-tracing','prd','default','spring.sleuth.http.enabled','false');
+INSERT INTO CONFIG VALUES('r-t.p.d.s.s.w.enabled','reap-tracing','prd','default','spring.sleuth.web.enabled','false');
 INSERT INTO CONFIG VALUES ('r-r.p.d.s.port','reap-rbac','prd','default','server.port','8070');
 INSERT INTO CONFIG VALUES ('r-r.p.d.p.m.salt','reap-rbac','prd','default','password.md5.salt', 'reap');
 INSERT INTO CONFIG VALUES ('r-p.p.d.s.port', 'reap-portal', 'prd', 'default', 'server.port', '8081');
 INSERT INTO CONFIG VALUES ('r-p.p.d.t.key', 'reap-portal', 'prd', 'default', 'token.key', '123456');
-INSERT INTO CONFIG VALUES ('r-p.p.d.s.s.w.additionalSkipPattern', 'reap-portal', 'prd', 'default', 'spring.sleuth.web.additionalSkipPattern', '/token');
+-- INSERT INTO CONFIG VALUES ('r-p.p.d.s.s.w.additionalSkipPattern', 'reap-portal', 'prd', 'default', 'spring.sleuth.web.additionalSkipPattern', '/token');
 
 
 
