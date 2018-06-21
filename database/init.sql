@@ -1,6 +1,10 @@
 -- 参数
+----统一参数
 INSERT INTO CONFIG VALUES('r.p.d.s.l.path','reap','prd','default','logging.file','${REAP_HOME:.}/logs/${spring.application.name}/app.log');
-INSERT INTO CONFIG VALUES('r.p.d.l.l.o.s.web','reap','prd','default','logging.level.org.springframework.web','INFO');
+INSERT INTO CONFIG VALUES('r.p.d.l.l.root','reap','prd','default','logging.level.root','INFO');
+INSERT INTO CONFIG VALUES('r.p.d.l.l.o.s.web','reap','prd','default','logging.level.org.springframework.web','DEBUG');
+INSERT INTO CONFIG VALUES('r.p.d.l.l.o.h.SQL','reap','prd','default','logging.level.org.hibernate.SQL','DEBUG');
+INSERT INTO CONFIG VALUES('r.p.d.l.l.o.h.t.d.sql','reap','prd','default','logging.level.org.hibernate.type.descriptor.sql','DEBUG');
 INSERT INTO CONFIG VALUES('r.p.d.s.z.baseUrl','reap','prd','default','spring.zipkin.baseUrl','http://reap-tracing');
 INSERT INTO CONFIG VALUES ('r.p.d.s.s.w.additionalSkipPattern', 'reap', 'prd', 'default', 'spring.sleuth.web.skipPattern', '/|/api-docs.*|/autoconfig|/configprops|/dump|/health|/info|/metrics.*|/mappings|/trace|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.woff|.*\.html|/favicon.ico|/hystrix.stream|/application/.*');
 INSERT INTO CONFIG VALUES('r.p.d.s.s.s.probability','reap','prd','default','spring.sleuth.sampler.probability','1.0');
@@ -13,14 +17,16 @@ INSERT INTO CONFIG VALUES('r.p.d.s.d.password', 'reap', 'prd', 'default', 'sprin
 INSERT INTO CONFIG VALUES('r.p.d.s.d.driver-class-name', 'reap', 'prd', 'default', 'spring.datasource.driver-class-name', 'org.h2.Driver');
 INSERT INTO CONFIG VALUES('r.p.d.s.j.open-in-view', 'reap', 'prd', 'default', 'spring.jpa.open-in-view', 'true');
 INSERT INTO CONFIG VALUES('r.p.d.s.j.show-sql', 'reap', 'prd', 'default', 'spring.jpa.show-sql', 'true');
-INSERT INTO CONFIG VALUES('r.p.d.s.j.p.h.format_sql', 'reap', 'prd', 'default', 'spring.jpa.properties.hibernate.format_sql', 'true');
 INSERT INTO CONFIG VALUES('r.p.d.s.j.h.ddl-auto', 'reap', 'prd', 'default', 'spring.jpa.hibernate.ddl-auto', 'none');
 INSERT INTO CONFIG VALUES('r.p.d.s.m.basename', 'reap', 'prd', 'default', 'spring.messages.basename', 'i18n/messages');
 INSERT INTO CONFIG VALUES('r.p.d.e.c.i-i-i-r-i-s','reap','prd','default','eureka.client.initial-instance-info-replication-interval-seconds','5');
 INSERT INTO CONFIG VALUES('r.p.d.e.c.i-i-r-i-s','reap','prd','default','eureka.client.instance-info-replication-interval-seconds','5');
 INSERT INTO CONFIG VALUES('r.p.d.e.c.r-f-r-i-s','reap','prd','default','eureka.client.registry-fetch-interval-seconds','5');
 INSERT INTO CONFIG VALUES('r.p.d.m.e.w.e.include','reap','prd','default','management.endpoints.web.exposure.include','*');
-
+----统一参数（可选）
+-- INSERT INTO CONFIG VALUES('r.p.d.r.l.l.destinations','reap','prd','default','reap.logging.logstash.destinations','47.95.243.70:5602');
+-- INSERT INTO CONFIG VALUES('r.p.d.r.l.l.b.size','reap','prd','default','reap.logging.logstash.buffer.size','0');
+----应用参数
 INSERT INTO CONFIG VALUES('r-f.p.d.s.p','reap-facility','prd','default','server.port','8761');
 INSERT INTO CONFIG VALUES('r-f.p.d.s.s.z.enabled','reap-facility','prd','default','spring.sleuth.zuul.enabled','false');
 INSERT INTO CONFIG VALUES ('r-f.p.d.s.s.w.additionalSkipPattern', 'reap-facility', 'prd', 'default', 'spring.sleuth.web.additionalSkipPattern', '/eureka.*');
@@ -31,9 +37,6 @@ INSERT INTO CONFIG VALUES ('r-r.p.d.s.port','reap-rbac','prd','default','server.
 INSERT INTO CONFIG VALUES ('r-r.p.d.p.m.salt','reap-rbac','prd','default','password.md5.salt', 'reap');
 INSERT INTO CONFIG VALUES ('r-p.p.d.s.port', 'reap-portal', 'prd', 'default', 'server.port', '8081');
 INSERT INTO CONFIG VALUES ('r-p.p.d.t.key', 'reap-portal', 'prd', 'default', 'token.key', '123456');
--- INSERT INTO CONFIG VALUES ('r-p.p.d.s.s.w.additionalSkipPattern', 'reap-portal', 'prd', 'default', 'spring.sleuth.web.additionalSkipPattern', '/token');
-
-
 
 -- 路由
 INSERT INTO ROUTE VALUES('reap','reap','/reap/**','reap-portal',null,null); -- 统一 UI路由
