@@ -11,7 +11,7 @@ INSERT INTO CONFIG VALUES('r.p.d.s.s.s.probability','reap','prd','default','spri
 INSERT INTO CONFIG VALUES('r.p.d.s.c.enable','reap','prd','default','server.compression.enable','true');
 INSERT INTO CONFIG VALUES('r.p.d.s.c.mime-types','reap','prd','default','server.compression.mime-types','aplication/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css');
 INSERT INTO CONFIG VALUES('r.p.d.s.r.static-locations', 'reap', 'prd', 'default','spring.resources.static-locations','file:apps/${spring.application.name}/static,classpath:static');
-INSERT INTO CONFIG VALUES('r.p.d.s.d.url', 'reap', 'prd', 'default', 'spring.datasource.url', 'jdbc:h2:tcp://localhost/../data/REAPDB');
+INSERT INTO CONFIG VALUES('r.p.d.s.d.url', 'reap', 'prd', 'default', 'spring.datasource.url', 'jdbc:h2:tcp://localhost/~/REAPDB');
 INSERT INTO CONFIG VALUES('r.p.d.s.d.username', 'reap', 'prd', 'default', 'spring.datasource.username', 'reap');
 INSERT INTO CONFIG VALUES('r.p.d.s.d.password', 'reap', 'prd', 'default', 'spring.datasource.password', 'reap');
 INSERT INTO CONFIG VALUES('r.p.d.s.d.driver-class-name', 'reap', 'prd', 'default', 'spring.datasource.driver-class-name', 'org.h2.Driver');
@@ -24,7 +24,7 @@ INSERT INTO CONFIG VALUES('r.p.d.e.c.i-i-r-i-s','reap','prd','default','eureka.c
 INSERT INTO CONFIG VALUES('r.p.d.e.c.r-f-r-i-s','reap','prd','default','eureka.client.registry-fetch-interval-seconds','5');
 INSERT INTO CONFIG VALUES('r.p.d.m.e.w.e.include','reap','prd','default','management.endpoints.web.exposure.include','*');
 ----统一参数（可选）
--- INSERT INTO CONFIG VALUES('r.p.d.r.l.l.destinations','reap','prd','default','reap.logging.logstash.destinations','47.95.243.70:5602');
+-- INSERT INTO CONFIG VALUES('r.p.d.r.l.l.destinations','reap','prd','default','reap.logging.logstash.destinations','your.logstash.ip.address:port');
 -- INSERT INTO CONFIG VALUES('r.p.d.r.l.l.b.size','reap','prd','default','reap.logging.logstash.buffer.size','0');
 ----应用参数
 INSERT INTO CONFIG VALUES('r-f.p.d.s.p','reap-facility','prd','default','server.port','8761');
