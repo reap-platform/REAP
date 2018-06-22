@@ -1,7 +1,7 @@
 #!/bin/sh
 #used to set base environment
-CURRENT_PATH=`pwd`
+work_path=`dirname $0`
+cd $work_path
 cd ..
 REAP_HOME=`pwd`
-export CURRENT_PATH
 export REAP_HOME
