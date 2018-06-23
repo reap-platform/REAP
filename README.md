@@ -25,6 +25,11 @@
 ```bash
 git clone https://github.com/reap-platform/REAP.git
 cd REAP
+```
+
+Windows:
+
+```bash
 ## start database  
 bin/start-db.bat
 ## init database 
@@ -38,6 +43,24 @@ bin/start.bat reap-rbac
 ## start reap-portal 
 bin/start.bat reap-portal 
 ```
+
+Linux:
+
+```bash
+## start database  
+bin/start-db.sh
+## init database 
+bin/init-db.sh
+## start reap-facility
+bin/start.sh reap-facility
+## start reap-tracing
+bin/start.sh reap-tracing
+## start reap-rbac
+bin/start.sh reap-rbac
+## start reap-portal 
+bin/start.sh reap-portal 
+```
+
 
 访问 `http://localhost:8761/reap/` 默认用户名密码： `amdin/888888`
 
