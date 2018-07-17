@@ -22,9 +22,6 @@ INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) 
 INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) VALUES('r.p.d.s.d.username', 'reap', 'prd', 'default', 'spring.datasource.username', 'reap');
 INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) VALUES('r.p.d.s.d.password', 'reap', 'prd', 'default', 'spring.datasource.password', 'reap');
 INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) VALUES('r.p.d.s.d.driver-class-name', 'reap', 'prd', 'default', 'spring.datasource.driver-class-name', 'org.h2.Driver');
-INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) VALUES('r.p.d.s.j.open-in-view', 'reap', 'prd', 'default', 'spring.jpa.open-in-view', 'true');
-INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) VALUES('r.p.d.s.j.show-sql', 'reap', 'prd', 'default', 'spring.jpa.show-sql', 'true');
-INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) VALUES('r.p.d.s.j.h.ddl-auto', 'reap', 'prd', 'default', 'spring.jpa.hibernate.ddl-auto', 'none');
 INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) VALUES('r.p.d.s.m.basename', 'reap', 'prd', 'default', 'spring.messages.basename', 'i18n/messages');
 -- 应用启动后第一次向 eureka 注册的时间（单位秒）
 INSERT INTO REAP_FACILITY.CONFIG (ID, SYSTEM_CODE, PROFILE, LABEL, NAME, VALUE) VALUES('r.p.d.e.c.i-i-i-r-i-s','reap','prd','default','eureka.client.initial-instance-info-replication-interval-seconds','5');
